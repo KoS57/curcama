@@ -1,63 +1,136 @@
-.header{
-    position: fixed;
-    width:100%;
-    height:100px;
-    top:0;
-    left:0;
-    z-index:50;
-    &:before{
-        content:'';
-        position: absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background-color: white;
-    }
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
-.header__body{
-    position: relative;
-   
-    display:flex;
-    justify-content: space-around;
-    height:80px;
+.header {
+  position: fixed;
+  z-index:3;
+  top:0;
+  left:0;
+  width:100%;
+  background-color: white;
+  &__container {
+    display: flex;
     align-items: center;
-    vertical-align: middle;
-    .header__menu__left{
-        justify-content: flex-end;
-       
+    justify-content: center;
+    height: 200px;
+  }
+  &__logo {
+    height: 100px;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+  &__actions {
+  }
+}
+
+.menu {
+  flex: 1 1 auto;
+  justify-content: center;
+  // padding: 0 0 0 100px/1200px * 100%;
+
+  &__body {
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+    li {
+      margin: 0 30px;
+      list-style-type: none;
+     
     }
-    
-    
+  }
+  &__link {
+    color: black;
+    text-decoration: none;
+  }
 }
-.header__list {
-    display:flex;
-li{
-    list-style: none;
-    margin:0px 0px 0px 20px;
+
+.actions-header {
+  display: flex;
+  align-items: center;
+  img {
+    height: 25px;
+    max-width: 100%;
+  }
 }
-.header__link{
-    //  
-    text-transform:uppercase;
+
+
+// ---------------CURCAMA PRODUCT REZEPT---------
+.curcama-product-rezept{
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: calc(30px + (100 - 30) * ((100vw - 320px) / (1200 - 320)));
+}
+.curcama-product, .curcama-rezept {
+  // width:calc(320px + (600 - 320) * ((100vw - 320px) / (1200 - 320)));
+  &__foto{
+    margin-right: 10px;
+      img{
+        max-width: 100%;
+        object-fit: cover;
+      }
+  }
+}
+.curcama-product-text{
+ &__button{
+  font-size:14px;
+  justify-content: center;
+  text-align: center;
+  margin-top:30px;
+  span{
+    border:2px solid rgb(213, 212, 212); 
+    position: relative;
+    padding: 10px;
+    letter-spacing: 3px;
+
+  }
+}
+
+&__button a{
+  color:black;
+}
+}
+.head-name{
+  font-size:24px;
+}
+.body-text{
+  margin-top:15px;
+  font-size: 18px;
+}
+
+
+// <!-------FOOTER------------- -->
+.footer{
+  display: flex;
+  margin-top: 100px;
+  height:300px;
+  text-align: left;
+  justify-content: center;
+  background-color: #f7f7f9;
+  padding:10px;
+  .column-contact{
+    flex-basis: 600px;
+    color:#936100;
+padding-top: calc(20px + (100 - 20) * ((100vw - 320px) / (1200 - 320)));
+  }
+  .unter{
+    letter-spacing: 0.75em;
     font-size: 16px;
-    text-decoration:none;
-}
-
-}
-.header__logo{
-    flex:0 0 60px; 
-    position:relative;
-    z-index:5;
-    img{
-        height:75px;
-        max-width:100%;
-
-    }
-}
-
-.header__logo__basket{
-    img{
-        height:25px;
-        max-width:100%;
-    }
+    margin-bottom: 20px;
+  }
+  .column-hilfe{
+    flex-basis: 600px;
+    padding-top: calc(20px + (100 - 20) * ((100vw - 320px) / (1200 - 320)));
+    color:#936100;
+  }
+  .paragraph{
+    font-size: 12px;
+    padding-top:10px;
+  }
 }

@@ -1,20 +1,21 @@
-@import 'fonts';
-@import 'header.scss';
+@import "fonts";
+@import "header.scss";
+@import "zeroing.scss";
 
 
 body{
-    margin:0;
+    // max-width:1180px;
+    // padding: 0 10px;
+    // align-items: center;
 }
 
 
-.container{
+.container-b{
   
     justify-content: center;
     text-align: center;
-    overflow-y:hidden; 
     margin-top: 200px;
-    margin-left: 200px;
-    margin-right: 200px;
+  
     h1{
         font-weight: 300;
         font-size: 30px;
@@ -29,13 +30,17 @@ body{
   
 
 }
+.rezept{
+    display: flex;
+    flex-direction: column;
 
-.rezept__foto{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-
+}
+.rezept-foto{
+ display:flex;
+ align-content: center;
+justify-content: center;
 .foto{
+    max-width: 475px;
     a{
         text-decoration: none;
         color:black;
@@ -47,52 +52,14 @@ body{
     }
 }
     img{
-        width:475px;
+        width:100%;
     }
     
 }
 
-.fotoprice{
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 200px;
-    margin-top: 105px;
-    font-family: Arial, Helvetica, sans-serif;
- 
-   img{
-        height: auto;
-        width: 100%;
-       max-width: 700px;
-       
-       
-   }
-   .footer_text{
-    text-align: center;
-    height:200px;
-    button{
-    background-color: white;
-    border:1px solid #f2f2f2;
-}
-h5{
-    font-size: 18px;
-    font-weight: 400;
-}
-   }
-}
-.contact{
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 400px;
-    padding-top: 100px;
-    padding-left: 150px;
-    background-color:rgba(147, 97, 0, 0.03);
-    color:rgba(147, 97, 0, 0.8);
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
 
 
-@import "media" ;
+
+@import "media-curcama.scss";
+
+@import "media-header.scss";

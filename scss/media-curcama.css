@@ -1,0 +1,125 @@
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .footer {
+    margin: 50px -10px;
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .container-text__bdy {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-text .text {
+    margin-top: 50px;
+  }
+
+  .product {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product .product-text, .product .product-apel {
+    text-align: center;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .curcama-essen {
+    flex-direction: column;
+    text-align: center;
+    margin-top: calc(80px + (200 - 80) * ((100vw - 320px) / (1200 - 320)));
+  }
+  .curcama-essen .essen-bottle {
+    max-width: none;
+  }
+
+  .description-curcama {
+    max-width: none;
+  }
+  .description-curcama__button-shop .basket-shop {
+    max-width: none;
+  }
+  .description-curcama__button-shop .shop {
+    max-width: none;
+  }
+
+  .curcama-product-rezept {
+    flex-direction: column;
+  }
+
+  .curcama-product, .curcama-rezept {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .rezept-foto {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .text {
+    margin-top: 260px;
+  }
+
+  .bottle-menu {
+    display: block;
+  }
+
+  .rezept {
+    display: block;
+  }
+
+  .foto-rezept__container {
+    margin: 140px 0px 0px 0px;
+    width: 240px;
+  }
+  .foto-rezept__subtext {
+    text-align: center;
+  }
+  .foto-rezept__btn {
+    text-align: center;
+  }
+
+  .button-rezept {
+    text-align: center;
+  }
+
+  .caption-h5 {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .caption-h3 {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .hide, .centre {
+    display: none;
+  }
+}
+/**/
+/*==========  Mobile First  ==========*/
+
+/*# sourceMappingURL=media-curcama.css.map */

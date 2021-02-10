@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Arial, Helvetica, sans-serif;
   src: url(../font/Amiko-Regular.ttf) format "ttf";
@@ -13,244 +14,447 @@
   src: url(../font/Amiko-SemiBold.ttf) format "ttf";
   font-weight: semibold;
 }
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .header {
   position: fixed;
-  width: 100%;
-  height: 100px;
-  top: 0;
-  left: 0;
-  z-index: 50;
-}
-.header:before {
-  content: "";
-  position: absolute;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background-color: white;
 }
-
-.header__body {
-  position: relative;
+.header__container {
   display: flex;
-  justify-content: space-around;
-  height: 80px;
   align-items: center;
-  vertical-align: middle;
+  justify-content: center;
+  height: 200px;
 }
-.header__body .header__menu__left {
-  justify-content: flex-end;
+.header__logo {
+  height: 100px;
 }
-
-.header__list {
+.header__menu {
   display: flex;
+  align-items: center;
 }
-.header__list li {
-  list-style: none;
-  margin: 0px 0px 0px 20px;
+.menu {
+  flex: 1 1 auto;
+  justify-content: center;
 }
-.header__list .header__link {
-  text-transform: uppercase;
-  font-size: 16px;
+.menu__list {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0px 0px 0px;
+}
+.menu__list li {
+  margin: 0 30px;
+  list-style-type: none;
+}
+.menu__link {
+  color: black;
   text-decoration: none;
 }
 
-.header__logo {
-  flex: 0 0 60px;
-  position: relative;
-  z-index: 5;
+.actions-header {
+  display: flex;
+  align-items: center;
 }
-.header__logo img {
-  height: 75px;
-  max-width: 100%;
-}
-
-.header__logo__basket img {
+.actions-header img {
   height: 25px;
   max-width: 100%;
 }
 
+.curcama-product-rezept {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: calc(30px + (100 - 30) * ((100vw - 320px) / (1200 - 320)));
+}
+
+.curcama-product__foto, .curcama-rezept__foto {
+  margin-right: 10px;
+}
+.curcama-product__foto img, .curcama-rezept__foto img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.curcama-product-text__button {
+  font-size: 14px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.curcama-product-text__button span {
+  border: 2px solid #d5d4d4;
+  position: relative;
+  padding: 10px;
+  letter-spacing: 3px;
+}
+.curcama-product-text__button a {
+  color: black;
+}
+
+.head-name {
+  font-size: 24px;
+}
+
+.body-text {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.footer {
+  display: flex;
+  margin-top: 100px;
+  height: 300px;
+  text-align: left;
+  justify-content: center;
+  background-color: #f7f7f9;
+  padding: 10px;
+}
+.footer .column-contact {
+  flex-basis: 600px;
+  color: #936100;
+  padding-top: calc(20px + (100 - 20) * ((100vw - 320px) / (1200 - 320)));
+}
+.footer .unter {
+  letter-spacing: 0.75em;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.footer .column-hilfe {
+  flex-basis: 600px;
+  padding-top: calc(20px + (100 - 20) * ((100vw - 320px) / (1200 - 320)));
+  color: #936100;
+}
+.footer .paragraph {
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
 body {
   margin: 0;
 }
 
-.grid {
-  display: grid;
-  justify-content: center;
+.top {
+  margin-top: 200px;
 }
 
+@media (max-width: 768px) {
+  .top {
+    margin-top: 80px;
+  }
+}
 .fotoblock {
   padding: 25px;
   text-align: center;
 }
 
-.container {
+.container-b {
+  display: flex;
   justify-content: center;
   text-align: center;
-  overflow-y: hidden;
-  margin-left: 200px;
-  margin-right: 200px;
 }
-.container h1 {
+.container-b__text {
+  max-width: 1180px;
+  padding: 0 10px;
+}
+.container-b h1 {
   font-weight: 300;
   font-size: 2em;
   font-family: Arial, Helvetica, sans-serif;
 }
-.container h4 {
+.container-b h4 {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  padding-top: 50px;
+  padding-top: 70px;
 }
-.container p {
+.container-b p {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  padding-top: 20px;
 }
 
 .container-foto {
-  display: grid;
-  margin-left: 200px;
-  margin-right: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-foto img {
   height: auto;
   width: 100%;
   margin: 0 auto;
-  max-width: 1100px;
-}
-
-.fotoprice {
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 200px;
-  margin-top: 105px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.fotoprice img {
-  height: auto;
-  width: 100%;
-  max-width: 700px;
-}
-.fotoprice .footer_text {
-  text-align: center;
-  height: 200px;
-}
-.fotoprice .footer_text button {
-  background-color: white;
-  border: 1px solid #f2f2f2;
-}
-.fotoprice .footer_text h5 {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 400px;
-  padding-top: 100px;
-  padding-left: 150px;
-  background-color: rgba(147, 97, 0, 0.03);
-  color: rgba(147, 97, 0, 0.8);
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1180px;
+  padding: 0 10px;
 }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-  .navmenu {
-    position: static;
-    max-width: 992px;
-  }
-  .navmenu .menu {
-    justify-content: center;
-  }
-
-  .grid {
-    grid-template-columns: minmax(680px, 860px);
-    justify-content: center;
-  }
-
-  .container-foto img {
-    height: auto;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 995px;
-  }
-
-  .fotoprice img {
-    max-width: 600px;
-  }
-}
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .header__menu {
-    padding: 70px 0px 0px 0px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: bisque;
+  .curcama-essen {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .header__burger {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 20px;
-    position: relative;
-    z-index: 3;
+  .description-curcama {
+    width: auto;
   }
-  .header__burger::before {
-    top: 0;
-    content: " ";
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
+  .description-curcama__button-shop .basket-shop {
+    width: auto;
   }
-  .header__burger::after {
-    content: " ";
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-  }
-  .header__burger .active ::before {
-    transform: rotate(45deg);
-  }
-  .header__burger .active ::after {
-    transform: rotate(-45deg);
+  .description-curcama__button-shop .shop {
+    width: auto;
   }
 
-  span {
-    position: absolute;
-    background-color: black;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 9px;
+  .curcama-product-rezept {
+    flex-direction: column;
   }
 
-  .header__list {
-    display: block;
+  .curcama-product, .curcama-rezept {
+    justify-content: center;
+    text-align: center;
   }
-  .header__list li {
-    margin: 0px 0 px 20px 0px;
+
+  .hide {
+    display: none;
   }
 }
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+  }
+}
 /* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .text {
+    margin-top: 260px;
+  }
+
+  .bottle-menu {
+    display: block;
+  }
+
+  .rezept {
+    display: block;
+  }
+
+  .foto-rezept__container {
+    margin: 140px 0px 0px 0px;
+    width: 240px;
+  }
+  .foto-rezept__subtext {
+    text-align: center;
+  }
+  .foto-rezept__btn {
+    text-align: center;
+  }
+
+  .button-rezept {
+    text-align: center;
+  }
+
+  .caption-h5 {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .caption-h3 {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .hide, .centre {
+    display: none;
+  }
+}
 /**/
 /*==========  Mobile First  ==========*/
+@media (max-width: 768px) {
+  ._lock {
+    overflow: hidden;
+  }
+
+  .header__container {
+    height: 80px;
+  }
+  .header__logo {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+  }
+  .header__logo img {
+    height: 40px;
+    max-width: 100%;
+  }
+  .menu__icon {
+    width: 100px;
+    display: inline-block;
+  }
+  .menu__body {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 80px 0px 0px 0px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+  }
+  .menu__body:after {
+    content: "";
+    background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .menu__body._active {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    z-index: 3;
+  }
+  .menu__list {
+    display: block;
+    text-align: center;
+  }
+  .menu__list li {
+    margin: 0px 0px 30px 0px;
+  }
+  .menu__list li:last-child {
+    margin: 0px 0px 0px 0px;
+  }
+  .menu__link {
+    font-size: 20px;
+  }
+
+  .icon-menu {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .icon-menu span {
+    top: calc(50% - 1px);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+  .icon-menu._active span:first-child {
+    top: calc(50%-1px);
+  }
+  .icon-menu._active span:last-child {
+    bottom: calc(50%-1px);
+  }
+
+  .actions-header {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    z-index: 5;
+  }
+}
 
 /*# sourceMappingURL=events.css.map */

@@ -1,172 +1,136 @@
-@import 'fonts';
-@import 'header.scss';
+@import "fonts";
+@import "header.scss";
+@import "zeroing.scss";
 
 
-body{
-    margin:0;
+
+.top {
+  margin-top: 200px;
 }
 
-
-.container{
-  
-    justify-content: center;
-    text-align: center;
-    overflow-y:hidden; 
-    margin-top: 200px;
-    margin-left: 200px;
-    margin-right: 200px;
-    h1{
-        font-weight: 300;
-        font-size: 30px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    h4{
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-         font-weight: bold;
-         padding-top: 50px;
-    }
-    p {
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.5;
-    }
-
+@media (max-width: 768px) {
+  .top {
+    margin-top: 80px;
+  }
+}
+%brcontent {
+  max-width: 1180px;
+  padding: 0 10px;
 }
 
-.container__text{
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 100px;
-    img{
-        max-width: width 503px;;
-    }
-    .text {
-       text-align: center;
-       margin-top: 150px;
-       font-size: 20px;
-       width:540px;
-    }
-    .text p{
-        line-height: 1.5;
-    }
+.container-b {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  &__text {
+    @extend %brcontent;
+  }
 
-    }
-
-
-.text__info{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 20px;
-    // width:540px;
-    p{
-        line-height: 1.5;
-    }
-}
-
-.foto__product{
-    margin-top: 150px;
-    img{
-width:100%;
-    }
-}
-
-.biolog__product{
-    margin-top:150px;
-    margin-left: 100px;
-    margin-right: 100px;
-    h2{
-        text-align: center;
-        font-weight: 300;
-    }
-    img{
-        max-width:300px;
-        
-        
-    }
-    .product{
-        display: grid;
-        justify-content: center;
-        text-align: center;
-        margin-top:100px;
-        grid-template-columns: 1fr 1fr; 
-    }
-    .product__text{
-        
-        text-align: left;
-        align-self: center;
-        justify-self: center;
-        line-height: 1.5;
-        font-size: 20px;
-        h4{
-            font-weight: 300;
-        }
-    }
-   
-    
-}
-
-.product__apel{
+  h1 {
+    font-weight: 300;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h4 {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top: 50px;
+  }
+  p {
+    padding-top: 20px;
     text-align: left;
-        
-        line-height: 1.5;
-        font-size: 20px;
-        h4{
-            font-weight: 300;
-        }
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+  }
 }
-.apel{
+
+.container-text {
+  margin-top: 100px;
+  &__bdy {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .foto{
+    max-width: 590px;
+    img {
+      max-width: 100%;
+    }
+  }
+ 
+  .text {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    max-width: 590px;
+  }
+  .text p {
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+}
+.foto-product {
+  margin-top: calc(50px + (150 - 50) * ((100vw - 320px) / (1200 - 320)));
+  img {
+    width: 100%;
+  }
+}
+
+.biolog-product {
+  margin-top: calc(50px + (150 - 50) * ((100vw - 320px) / (1200 - 320)));
+
+  h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+  }
+ 
+  .product {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    
+  }
+  .product-foto {
+    max-width: 590px;
+justify-self:end; 
+    img {
+      width: 100%;
+    }
+  }
+  .product-text {
+   max-width: 590px;
+    text-align: left;
     align-self: center;
     justify-self: center;
-    
+    line-height: 1.5;
+    font-size: 20px;
+    h4 {
+      font-weight: 300;
+    }
+  }
 }
 
-
-
-
-.fotoprice{
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 200px;
-    margin-top: 105px;
-    font-family: Arial, Helvetica, sans-serif;
- 
-   img{
-        height: auto;
-        width: 100%;
-       max-width: 700px;
-       
-       
-   }
-   .footer_text{
-    text-align: center;
-    height:200px;
-    button{
-    background-color: white;
-    border:1px solid #f2f2f2;
+.product-apel {
+  max-width: 590px;
+  text-align: left;
+  align-self: center;
+  justify-self: center;
+  line-height: 1.5;
+  font-size: 20px;
+  h4 {
+    font-weight: 300;
+  }
 }
-h5{
-    font-size: 18px;
-    font-weight: 400;
-}
-   }
-}
-.contact{
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 400px;
-    padding-top: 100px;
-    padding-left: 150px;
-    background-color:rgba(147, 97, 0, 0.03);
-    color:rgba(147, 97, 0, 0.8);
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    
+.apel {
+  align-self: center;
+  justify-self: center;
+  align-self: center;
 }
 
+@import "media-curcama.scss";
 
-@import "media" ;
+@import "media-header.scss";
